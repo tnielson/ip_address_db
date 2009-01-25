@@ -1,0 +1,9 @@
+<table>
+<% form_tag ipnets_path, :method => 'get' do%>
+	<tr>
+    <td><%= text_field_tag :search, params[:search]%></td>
+	<td><%= select_tag("suchoption", "<option>Name</option><option>IP</option><option>Netzmaske</option>") %></td>
+	<td><%= submit_tag "Suchen", :name => nil%></td>
+	</tr>	
+<% end %>	
+</table>

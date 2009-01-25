@@ -1,0 +1,46 @@
+<%= render :partial => 'shared/usermenue',
+		:locals => { :active => 'Admin_User' } -%>
+<h2><%= t(:user_administrate_users_heading)%></h2>
+<table id="list">
+	<tr>
+		<th><%= t(:username)%></th><th><%= t(:lastname)%></th><th><%= t(:firstname)%></th><th><%= t(:role_name)%></th><th><%= t(:last_login)%></th><th><%= t(:status)%></th><th><%= t(:reason)%></th><th><%= t(:date)%></th>
+	</tr>
+<%
+listentry = 0
+for u in @users do
+listentry = listentry ^ 1
+-%>
+
+<%
+deac = t(:deactivated)
+text = t(:ativate)
+
+if u.userdata.deactivated == false 
+deac = t(:activated)
+text = t(:deactivate)
+end%>
+
+	<tr class="listentry<%=listentry-%>">
+		<td><%= h u.user_name -%></td>
+		<td><%= h u.lastname -%></td>
+		<td><%= h u.firstname -%></td>
+		<td><%= h u.role.role_name -%></td>
+		<td><%= h u.userdata.last_login -%></td>
+		<td><%= deac -%></td>
+		<td><%= h u.userdata.deactivation_reason -%></td>
+		<td><%= h u.userdata.deactivation_date -%></td>
+		<td><%= link_to(text, :action => 'toggle_deactivation', :id => u.id)%></td>
+		<td><%= link_to( t(:edit), edit_user_path(u)) -%></td>
+		<td><%= link_to( t(:permissions), :controller => 'permission', :action => 'list', :id => u.role.id) -%></td>
+		<td><%= link_to( t(:delete), u, :confirm => t(:user_confirm_deletion), :method => :delete) -%></td>
+	</tr>
+<% end -%>
+</table>
+
+<ul id="navigation">
+	<li><%= link_to t(:link_to_users_new), new_user_path %></li>
+</ul>
+
+<% content_for :infobox do %>
+<p><%= t(:user_administrate_users_infobox)%></p>
+<% end %>

@@ -1,0 +1,12 @@
+<%= error_messages_for :ipnet %>
+
+<table>
+<tr><th>name</th></tr>
+<% for ipnet in @checked %>
+<tr><td><%=h ipnet.name%></td></tr>
+<% end %>
+</table>
+
+<p>Ip_new: <%= @ip_new.ip %></p>
+<p>Netmask_new: <%= @ip_new.netmask %></p>
+

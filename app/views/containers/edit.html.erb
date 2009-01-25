@@ -1,0 +1,21 @@
+<h1>Key <%=@key.key_name%> bearbeiten</h1>
+
+<%= error_messages_for :key %>
+
+<% form_for(@key) do |f| %>
+  <p>
+    <b><%= t(:key_name)%></b><br />
+    <%= f.text_field :key_name %>
+  </p>
+  
+  <p>
+    <b><%= t(:description)%></b><br />
+    <%= f.text_field :key_description %>
+  </p>
+ 
+  <p>
+    <%= f.submit t(:update) %>
+  </p>
+<% end %>
+
+<%= link_to t(:back), :action => 'index' %>

@@ -1,0 +1,1 @@
+Type.create(:id => 1, :name => "leertyp")

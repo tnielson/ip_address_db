@@ -1,0 +1,9 @@
+<% for ipnet in @ipnets %>
+
+  <tr>
+	<%= render(:partial => "ipnet", :object => ipnet)%>
+    <td><%= link_to 'Show', ipnet %></td>
+    <td><%= link_to 'Edit', edit_ipnet_path(ipnet) %></td>
+    <td><%= link_to 'Destroy', ipnet, :confirm => 'Sind Sie sicher?', :method => :delete %></td>
+  </tr>
+<% end %>

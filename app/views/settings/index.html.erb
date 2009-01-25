@@ -1,0 +1,108 @@
+<%= render :partial => 'shared/usermenue',
+		:locals => { :active => 'Applikation' } -%>
+<h2><%= t(:setting_index_heading) %></h2>
+<p><%= link_to( t(:link_to_settings_edit), :controller => 'settings', :action => 'edit') -%></p>
+<table id="list">
+	<tr>
+		<th> Nr. </th><th> Parameter </th><th> Wert </th><th> Bemerkung </th>
+	</tr>
+	<tr>
+		<td> 01. </td>
+		<td> Session Timeout in Sekunden: </td>
+		<td> <%= h @settings["session_timeout"] -%> </td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td> 02. </td>
+		<td> Sollen Passworte altern? </td>
+		<td> <%= int_to_jn(@settings["enable_password_aging"]) -%> </td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td> 03. </td>
+		<td> Passworterneuerung nach wieviel Tagen? </td>
+		<td> <%= h @settings["password_expires_after"] -%> </td>
+		<td> Hat keine Auswirkungen bei 02. => Nein </td>
+	</tr>
+	<tr>
+		<td> 04. </td>
+		<td> Maximalzahl der Login-Fehlversuche vor Deaktivierung: </td>
+		<td> <%= h @settings["login_attempts"] -%> </td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td> 05. </td>
+		<td> Startseite der Applikation: </td>
+		<td> <%= h @settings["default_page"] -%> </td>
+		<td> </td>		
+	<tr>
+		<td colspan= "4"><hr/></td>
+	</tr>
+	<tr>
+		<td> 06. </td>
+		<td> Inaktive Nutzer automatisch deaktivieren? </td>
+		<td> <%= int_to_jn(@settings["deactivate_inactive_users"]) -%> </td>
+	</tr>
+	<tr>
+		<td> 07. </td>
+		<td> Inaktive Nutzer nach wieviel Tagen deaktivieren? </td>
+		<td> <%= h @settings["deactivate_after_inactive_days"] -%> </td>
+		<td> Hat keine Auswirkungen bei 06. => Nein </td>
+	</tr>
+	<tr>
+		<td> 08. </td>
+		<td> Sollen inaktive Nutzer vor der Deaktivierung benachrichtigt werden? </td>
+		<td> <%= int_to_jn(@settings["remind_inactive_users"]) -%> </td>
+		<td> Hat keine Auswirkungen bei 06. => Nein </td>
+	</tr>
+	<tr>
+		<td> 09. </td>
+		<td> Benachrichtigung wieviel Tage vor Deaktivierung? </td>
+		<td> <%= h @settings["remind_days_before_deactivation"] -%> </td>
+		<td> Hat keine Auswirkungen bei 08. => Nein </td>
+	</tr>
+	<tr>
+		<td colspan= "4"><hr/></td>
+	</tr>
+	<tr>
+		<td> 10. </td>
+		<td> Sollen deaktivierte Nutzer automatisch gel&ouml;scht werden? </td>
+		<td> <%= int_to_jn(@settings["delete_deactivated_users"]) -%> </td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td> 11. </td>
+		<td> Deaktivierte Nutzer nach wieviel Tagen l&ouml;schen? </td>
+		<td> <%= h @settings["delete_deactivated_users_after_deactivated_days"] -%> </td>
+		<td> Hat keine Auswirkungen bei 10. => Nein </td>
+	</tr>
+	<tr>
+		<td> 12. </td>
+		<td> Benachrichtigung an Gruppe Admin vor automatischer Nutzerl&ouml;schung? </td>
+		<td> <%= int_to_jn(@settings["remind_admin_before_deletion"]) -%> </td>
+		<td> Hat keine Auswirkungen bei 10. => Nein </td>
+	</tr>
+	<tr>
+		<td> 13. </td>
+		<td> Wieviel Tage vor der L&ouml;schung sollen die Admins benachrichtigt werden? </td>
+		<td> <%= h @settings["remind_admin_before_deletion_in_days"] -%> </td>
+		<td> Hat keine Auswirkungen bei 10. => Nein </td>
+	</tr>
+	<tr>
+		<td> 14. </td>
+		<td> Benachrichtigung an deaktivierte Nutzer vor L&ouml;schung? </td>
+		<td> <%= int_to_jn(@settings["remind_user_before_deletion"]) -%> </td>
+		<td> Hat keine Auswirkungen bei 10. => Nein </td>
+	</tr>
+	<tr>
+		<td> 15. </td>
+		<td> Nutzerbenachrichtigung wieviel Tage vorher? </td>
+		<td> <%= h @settings["remind_user_before_deletion_in_days"] -%> </td>
+		<td> Hat keine Auswirkungen bei 14. => Nein </td>
+	</tr>
+</table>
+
+<% content_for :infobox do %>
+<p><%= t(:setting_index_infobox_1) %></p>
+<p><%= t(:setting_index_infobox_2) %></p>
+<% end %>

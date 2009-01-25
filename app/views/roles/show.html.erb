@@ -1,0 +1,19 @@
+<%= render :partial => 'shared/usermenue',
+		:locals => { :active => 'Rollen' } -%>
+<h2><%= t(:role_show_heading) %></h2>
+
+<%= error_messages_for 'role' -%>
+<table class="form">
+   <tr>
+      <td class="label"><%= t(:role_name) %></td>
+      <td class="input"><%= h @role.role_name %></td>
+   </tr><tr>
+      <td class="label"><%= t(:description) %></td>
+      <td class="input"><%= h @role.description %></td>
+   </tr>
+</table>
+
+<ul>
+	<li><%= link_to t(:link_to_roles_index), roles_path -%></li>
+	<li><%= link_to t(:link_to_roles_edit), edit_role_path(@role) -%></li>
+</ul>

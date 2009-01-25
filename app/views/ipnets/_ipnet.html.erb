@@ -1,0 +1,14 @@
+<tr class="listentry<%=listentry-%>">
+<td class="nobackground"><%= check_box(ipnet.id, "checked", {})%></td>	
+<td><%=h ipnet.id %></td>
+<td><%=h ipnet.name %></td>
+<td><%=h ipnet.ipaddr%></td>
+<td><%=h ipnet.netmask%></td>
+<td><%=h ipnet.description%></td>
+<td><%=h ipnet.unq %></td>
+
+<td class="nobackground"><%= link_to t(:show), :action => 'index', :current_object => ipnet, :back => ipnet.parent_id %></td>
+<td class="nobackground"><%= button_to t(:edit), :action => 'edit', :id => ipnet, :back => ipnet.parent_id %></td>
+<td class="nobackground"><%= button_to t(:delete), ipnet, :confirm => t(:ipnet_confirm_deletion), :method => :delete %></td>
+<td class="nobackground"><%= button_to t(:split), :action => 'split', :id => ipnet.id, :back => ipnet.parent_id %></td>
+</tr>

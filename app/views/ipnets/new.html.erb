@@ -1,0 +1,53 @@
+<h1><%= t(:ipnet_new_heading)%></h1>
+
+<%= error_messages_for :ipnet %>
+
+<table>
+	<% form_for :net, 
+				:url => {:action => "new_ipnet"},
+				:html => {:method => :get } do |f| %>		
+	<td><%= select_tag ("suchoption", "<option>1</option><option>2</option><option>4</option><option>8</option><option>16</option><option>32</option><option>64</option><option>128</option><option>256</option><option>512</option><option>1024</option><option>2048</option><option>4096</option>") %></td>
+	<td><%= f.submit t(:search) %></td>
+	<% end %>	
+</table>
+
+<% form_for(@ipnet) do |f| %>
+  <p>
+    <b><%= t(:name)%></b><br />
+    <%= f.text_field :name %>
+  </p>
+  
+  <p>
+    <b><%= t(:ipnet_ip_with_netmask_prefix)%></b><br />
+    <%= f.text_field :ipaddr %>
+  </p>
+  
+  <p>
+    <b><%= t(:netmask)%></b><br />
+    <%= f.text_field :netmask %>
+  </p>
+  	
+    <%= f.hidden_field :parent_id, :value => session[:current_ipnet] %>
+ 
+ <% if (Ipnet.find(session[:current_ipnet])).unq? then %>
+    <%= f.hidden_field :unq, :value => true %>
+ <% else %>
+  <p>
+    <b>Unique</b><br />
+    <%= f.check_box :unq%>
+  </p>
+ <% end %>
+ 
+ <%= f.hidden_field :lvl, :value => (Ipnet.find(session[:current_ipnet])).lvl + 1 %>
+
+  <p>
+    <%= f.submit t(:create) %>
+  </p>
+<% end %>
+
+<%= link_to t(:back), :action => 'index' %>
+
+<% content_for :infobox do %>
+  <p><%= t(:ipnet_new_infobox_1)%></p>
+  <p><%= t(:ipnet_new_infobox_2)%></p>
+<% end %>

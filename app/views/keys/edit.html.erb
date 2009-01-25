@@ -1,0 +1,21 @@
+<h1>Key <%=@key.key_name%> bearbeiten</h1>
+
+<%= error_messages_for :key %>
+
+<% form_for(@key) do |f| %>
+  <p>
+    <b>Schlüsselname</b><br />
+    <%= f.text_field :key_name %>
+  </p>
+  
+  <p>
+    <b>Beschreibung</b><br />
+    <%= f.text_field :key_description %>
+  </p>
+ 
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Index', :action => 'index' %>

@@ -1,0 +1,3 @@
+NoticeMailer#inform_user
+
+Find me in app/views/notice_mailer/inform_user.erb

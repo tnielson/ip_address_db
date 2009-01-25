@@ -1,0 +1,34 @@
+<% form_for user do |f| %>
+<table class="form">
+   <tr>
+      <td class="label"><label for="user_name"><%= t(:username) %></label></td>
+      <td class="input"><%= f.text_field :user_name %></td>
+   </tr><tr>
+      <td class="label"><label for="lastname"><%= t(:lastname) %></label></td>
+      <td class="input"><%= f.text_field :lastname %></td>
+   </tr><tr>
+      <td class="label"><label for="firstname"><%= t(:firstname) %></label></td>
+      <td class="input"><%= f.text_field :firstname %></td>
+   </tr><tr>
+      <td class="label"><label for="behoerde"><%= t(:behoerde) %></label></td>
+      <td class="input"><%= f.text_field :behoerde %></td>
+   </tr><tr>
+      <td class="label"><label for="email"><%= t(:email) %></label></td>
+      <td class="input"><%= f.text_field :email %></td>
+   </tr><tr>
+   	  <td class="label"><label for="role_id"><%= t(:role_name) %></label></td>
+   	  <td class="input"><%= f.select(:role_id, @roles) %></td>
+   </tr><tr>
+      <td colspan="2"><hr/></td>
+   </tr><tr>
+      <td class="label"><label for="password"><%= t(:password) %></label></td>
+      <td class="input"><%= f.password_field :password %></td>
+   </tr><tr>
+      <td class="label"><label for"password_confirmation"><%= t(:password_confirmation) %></label></td>
+      <td class="input"><%= f.password_field :password_confirmation %></td>
+   </tr><tr>
+      <td class="button"> </td>
+      <td class="button"><%= f.submit t(:save) %></td>
+   </tr>
+</table>
+<% end %>

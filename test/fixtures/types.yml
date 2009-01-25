@@ -1,0 +1,6 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+standort:
+  name: Standort
+  created_at: 2009-01-07 15:45:26
+  updated_at: 2009-01-07 15:45:26

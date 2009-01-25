@@ -1,0 +1,334 @@
+--- 
+de: 
+##Errormessages
+  activerecord: 
+    errors: 
+      messages: 
+        taken: "ist bereits vergeben"
+        accepted: "muss akzeptiert werden"
+        not_a_number: "ist kein numerischer Wert"
+        greater_than_or_equal_to: "muss gr\xC3\xB6\xC3\x9Fer oder gleich als {{count}} sein"
+        blank: "darf nicht leer sein"
+        exclusion: "ist reserviert"
+        confirmation: "passt nicht zur Best\xC3\xA4tigung"
+        less_than_or_equal_to: "muss kleiner oder gleich als {{count}} sein"
+        odd: "muss ungerade sein"
+        invalid: "ist ung\xC3\xBCltig"
+        too_short: "ist zu kurz (mindestens {{count}} Zeichen)"
+        empty: "muss ausgef\xC3\xBCllt werden"
+        wrong_length: "hat eine falsche L\xC3\xA4nge (sollte {{count}} Zeichen lang sein)"
+        too_long: "ist zu lang (maximal {{count}} Zeichen erlaubt)"
+        less_than: "muss kleiner als {{count}} sein"
+        even: "muss gerade sein"
+        greater_than: "muss gr\xC3\xB6\xC3\x9Fer als {{count}} sein"
+        inclusion: "ist nicht in der Liste vorhanden"
+        equal_to: "muss \xC3\xA4quivalent zu {{count}} sein"
+      template: 
+        body: "Es traten Fehler bei folgenden Feldern auf:"
+        header: 
+          one: "1 Fehler verhindert das Speichern dieses {{model}}"
+          other: "{{count}} Fehler verhinderten das Speichern dieses {{model}}"
+  
+
+  
+de:  
+
+  ##General - Häufig verwendete Bezeichnungen
+  name: "Name"
+  key: "Schlüssel"
+  value: "Wert"
+  back: "Zurück"
+  date: "Datum"
+  
+  ##Buttons
+  new: "Neu"
+  edit: "Bearbeiten"
+  update: "Ändern"
+  remove: "Entfernen"
+  delete: "Löschen"
+  show: "Zeigen"
+  save: "Speichern"
+  create: "Erstellen"
+  search: "Suchen"
+  merge: "Zusammenfassen"
+  split: "Netz teilen"
+  
+  ##Andere
+  description: "Beschreibung"
+  confirm: "Sind Sie sicher?"
+  deactivated: "deaktiviert"
+  deactivate: "deaktivieren"
+  activated: "aktiviert"
+  activate: "aktivieren"
+
+############################   
+          
+  ##Users
+  
+  ##User-Datensatz
+  username: "Username"
+  firstname: "Vorname"
+  lastname: "Nachname"
+  email: "EMail"
+  behoerde: "Behörde"
+  password: "Passwort"
+  password_old: "Altes Passwort"
+  password_new: "Neues Passwort"
+  password_confirmation: "Passwort Wiederholung"
+  last_login: "Letzter Login"
+  status: "Status"
+  reason: "Grund"
+  
+  ##User-Views 
+   
+  ##User-welcome
+  user_welcome_heading: "Wilkommen bei der IP-Manager Applikation"
+  user_welcome_infobox: "Bitte loggen Sie sich ein, um die Applikation nutzen zu können."
+    
+  ##User-login
+  user_login_heading: "User Login"
+  user_login_signin: "Anmelden"
+  user_login_infobox: "Sofern Sie Schwierigkeiten beim Login haben oder einen neuen Account benötigen, wenden Sie sich an den Administrator!"
+    
+  ##User-index
+  user_index_heading: "Liste der User"
+  user_index_infobox: "Auflistung aller im System eingetragenen Nutzer"
+  user_confirm_deletion: "Sind Sie sicher, dass Sie den User endgültig löschen wollen?"
+     
+  ##User-new
+  user_new_heading: "Neuen User anlegen"
+  user_new_infobox: "Neue User können nur mit einem Startpasswort angelegt werden. Bitte informieren Sie den neuen Nutzer über das von Ihnen vergebene Passwort!"
+    
+  ##User-change_password
+  user_change_password_heading: "Mein Passwort ändern"
+  user_change_password_infobox: "Neue User können nur mit einem Startpasswort angelegt werden. Bitte informieren Sie den neuen Nutzer über das von Ihnen vergebene Passwort!"
+    
+  ##User-edit
+  user_edit_heading: "Userdaten ändern"
+  user_edit_infobox_1: "Als Administrator haben Sie die Möglichkeit, Userdaten ohne Verwendung des Passworts zu ändern. Lassen Sie in diesem Fall die beiden Felder leer. Das Nutzerpasswort bleibt in diesem Fall unverändert."
+  user_edit_infobox_2: "Sie können aber auch das Nutzerpasswort neu setzen, indem Sie die Felder mit einem von Ihnen gewählten Passwort belegen."
+    
+  ##User-my_settings
+  user_my_settings_heading: "Meine Einstellungen ändern"
+  user_my_settings_infobox: "Bitte wenden Sie sich zur Änderungen Ihres Namens (z.B. bei Heirat) an den Systemadministrator!"
+    
+  ##User-show
+  user_show_heading: "Userdaten anzeigen"
+  user_show_infobox: "Noch nichts"
+  
+  ##User-recover_password
+  
+  ##User-administrate_users
+  user_administrate_users_heading: "Liste der User"
+  user_administrate_users_infobox: ""
+    
+  ##User-Links
+  link_to_users_index: "Userliste"
+  link_to_users_new: "Neuen User anlegen"
+  link_to_users_edit: "Userdaten bearbeiten"
+  link_to_users_login_linkname: "hier lang"
+  link_to_users_login: "Zur Login-Seite geht's "
+  link_to_users_forgot_password: "Passwort vergessen?"
+ 
+############################  
+  
+  ##Permissions
+  ##Datensatz
+  permissions: "Berechtigungen"
+  permission: "Berechtigung"
+  controller: "Controller"
+  action: "Action"
+  
+  ##Permission-Views
+  
+  ##Permission-list_all
+  permission_list_all_heading: "Berechtigungen für alle Rollen"
+  permission_list_all_infobox_1: "Die hier aufgeführten Berechtigungen können für jede angelegte Rolle explizit geändert werden. Alle Actions werden mit Standard 'verweigert' angelegt."
+  permission_list_all_infobox_2: "Sofern programmiertechnisch eine neue Action definiert wurde, muss zunächst der Link 'neue Actions finden' betätigt werden, damit die Action aufgelistet wird."
+  
+  ##Permission-list
+  permission_list_heading: "Berechtigungen für: "
+  permission_list_: ""
+  permission_list_infobox_1: "Damit ein User sich einloggen und selbst administrieren kann, sollten Sie ihm mindestens folgende Berechtigungen im UsersController erteilen:"
+  permission_list_infobox_2: "<ul><li>welcome</li><li>login</li><li>logout</li><li>show</li><li>change_password</li><li>update_password</li><li>my_settings</li><li>update_my_settings</li></ul>"
+  
+  ##Permission-Links
+  link_to_permissions_import_actions: "Neue Actions oder Rollen finden"
+  link_to_permissions_toggle_permission: "Berechtigung ändern"
+ 
+############################ 
+  
+  ##Roles
+  
+  ##Role-Datensatz
+  role_name: "Rollenname"
+  
+  ##Role-Views
+  
+  ##Role-Index
+  role_index_heading: "Liste aller bestehenden Rollen"
+  role_confirm_deletion: "Sind Sie sicher, dass Sie diese Rolle endgültig löschen wollen?"
+  role_index_infobox_1: "Über die Rollen werden unterschiedliche User des Systems definiert."
+  role_index_infobox_2: "Bitte beachten Sie, dass die Rollen 'Gast' sowie 'Administrator' niemals gelöscht werden dürfen!"  
+  
+  ##Role-New
+  role_new_heading: "Neue Rolle anlegen"
+  role_new_infobox_1: "Hier können Sie neue Rollen anlegen. Bitte beachten Sie, dass diese neuen Rollen dann noch keinerlei Berechtigungen im System haben! Die Berechtigungen müssen für jede Action explizit gesetzt werden."
+  role_new_infobox_2: "Die Rolle 'Gast' darf niemals vergeben werden!"
+  
+  ##Role-Edit
+  role_edit_heading: "Rolle editieren"
+  role_edit_infobox: "Hier können Sie nur Namen und Beschreibung der Rolle ändern. Um entsprechende Berechtigungen zu verteilen, nutzen Sie bitte die Funktion 'Berechtigungen'."
+  
+  ##Role-Show
+  role_show_heading: "Rolle anzeigen"
+   
+  ##Role-Links
+  link_to_roles_index: "Rollenliste"
+  link_to_roles_new: "Neue Rolle anlegen"
+  link_to_roles_edit: "Rolle bearbeiten"
+  
+############################
+
+  ##Settings
+  
+  ##Setting-Datensatz
+  
+  ##Setting-Views
+  
+  ##Setting-index
+  setting_index_heading: "Applikationseinstellungen"
+  setting_index_infobox_1: "Die hier angezeigten Einstellungen gelten für die gesamte Applikation!"
+  setting_index_infobox_2: "Bitte passen Sie die Einstellungen den aktuellen Sicherheitsrichtlinien des Konzerns an."
+  
+  ##Setting-edit
+  setting_edit_heading: "Applikationseinstellungen ändern"
+  setting_edit_infobox: "Hier vorgenommene Änderungen wirken auf die gesamte Applikation!"
+  
+  ##Setting-Links
+  link_to_settings_index: "Liste aller Einstellungen"
+  link_to_settings_edit: "Globale Einstellungen ändern"
+  
+############################
+    
+  ##Ipnets
+  
+  ##Ipnet-Datensatz
+  ipaddr: "IP-Adresse"
+  netmask: "Netzmaske"
+  unq: "Unqiue"
+  
+  ##Ipnet-Views
+  
+  ##Ipnet-index
+  ipnet_index_heading: "Aktuelles Netz: "
+  ipnet_index_search_heading: "Suchergebnisse: "
+  ipnet_index_subnets_of: "Subnetze von "
+  ipnet_index_infobox_1: "Unique: Die Adressen des Netzes und all ihrer Subnetze dürfen nur ein einziges Mal verwendet werden"
+  ipnet_index_infobox_2: "Netze zusammenfassen: Um mehrere IP-Netze zusammenzufassen, markieren Sie bitte das erste und das letzte Element der Zusammenfassung mittels Checkboxen. Alle dazwischenliegenden Netze werden automatisch mitberechnet. Der Vorgang wird über den Button gestartet."
+
+  ##Ipnet-new
+  ipnet_new_heading: "Neues Ipnetz anlegen"
+  ipnet_ip_with_netmask_prefix: "IP-Adresse / Netzmaske (Prefix-Notation)"
+  ipnet_new_infobox_1: "Bei der Erstellung eins IP-Netzes ist es möglich, die IP-Adresse mit Präfix-Notation zu schreiben. Beispiel: Sie können entweder in das IP-Feld eingeben 192.168.0.1/24 und die Netzmaske leer lassen oder eben in das erste Feld die IP und in das zweite die ausgeschrieben Netzmaske, in diesem Fall 255.255.255.0"
+  ipnet_new_infobox_2: "Unique: Die Adressen des Netzes und all ihrer Subnetze dürfen nur ein einziges Mal verwendet werden. Ein Setzen des Hakens wird sich auf alle zukünftigen Subnetze dieses Objektes auswirken"
+
+  ##Ipnet-edit
+  ipnet_edit_heading: "Ipnetz bearbeiten: "
+  ipnet_edit_infobox: ""
+  
+  ##Ipnet-join_ipnet
+  ipnet_join_ipnet_heading: "Die folgenden IP-Netze können zu einem neuen Netz zusammengefasst werden:"
+  ipnet_join_ipnet_look_of_new_net: "Das neue Netz würde wie folgt aussehen:"
+  ipnet_join_ipnet_infobox: ""
+ 
+  ##Ipnet-Links
+  link_to_ipnets_new: "Neues IP-Netz anlegen"
+  link_to_join: "Netze zusammenfassen"
+  
+  ##Ipnet-Partials
+  
+  ##_table_headings
+  
+  ##_ipnet_net
+  ipnet_confirm_deletion: "Wollen Sie das Netz wirklich löschen?"
+  
+  ##_ipnet
+  
+############################
+  
+  ##Containers
+  
+  ##Container-Datensatz
+  
+  ##Container-Views
+  
+  ##Container-index
+  container_index_heading: "Auflistung aller Container"
+  container_index_confirm_new_container: "Soll ein Container dieses Typs angelegt werden?"
+  container_confirm_deletion: "Sind Sie sicher, dass der Container gelöscht werden soll?"
+  container_index_infobox: "Zum Erstellen eines neuen Containers wählen Sie bitte aus der Selectbox den entsprechenden Typen aus und betätigen Sie den Button"
+  
+  ##Container-new
+  container_new_heading: "Neuen Container anlegen"
+  container_new_infobox: ""
+  
+  ##Container-edit
+  container_edit_heading: "Neuen Container anlegen"
+  container_edit_infobox: ""
+  
+  ##Container-show
+  container_show_heading: "Container bearbeiten: "
+  container_show_infobox: ""  
+  
+  ##Container-Links
+  link_to_containers_index: "Liste der Container"
+  link_to_containers_new: "Neuen Container erstellen"
+  
+############################
+  
+  ##Types
+  
+  ##Type-Datensatz
+  typename: "Typname"
+  
+  ##Type-Views
+  
+  ##Type-index
+  type_index_heading: "Auflistung aller Typen"
+  type_index_infobox: "Typen stellen Kategorien dar, in welche Container eingeordnet werden können. Einem Typen können beliebig viele Schlüssel zugeordnet werden."
+  
+  ##Type-show
+  type_show_heading: "Typ anzeigen: "
+  type_show_infobox: "Hier sehen Sie, aus welchen Schlüsseln der Typ besteht."
+  
+  ##Type-new
+  type_new_heading: "Neuen Typ anlegen"
+  
+  ##Type-edit
+  type_edit_heading: "Typ bearbeiten: "
+  type_edit_add_key: "Schlüssel hinzufügen"
+  type_edit_infobox_1: "Um einem Typen benötigte Schlüssel hinzuzufügen, wählen Sie einen gewünschten Eintrag über die Drop-Down-Liste aus und klicken Sie auf Update."
+  type_edit_infobox_2: "Die hinzugefügten Schlüssel lassen sich jederzeit entfernen, solange noch kein Container diesen Typen verwendet."
+  type_edit_infobox_3: "Sollten Sie dennoch einen Schlüssel entfernen wollen, kontaktieren Sie bitte einen Administrator."
+  
+  ##Type-Links
+  link_to_types_index: "Liste aller Typen"
+  link_to_types_new: "Neuer Typ"
+  
+############################
+  
+  ##Keys
+   
+  ##Key-Datensatz
+  key_name: "Schlüsselname"
+  
+  ##Key-Views
+  
+  ##Key-Links
+  link_to_keys_new: "Neuen Schlüssel erstellen"
+  
+############################
+
+    
+         

@@ -1,0 +1,15 @@
+<h1><%= t(:type_show_heading) %><%=@type.name%></h1>
+
+<p><%= t(:name)%> <%= @type.name %></p><br />
+
+<ul>
+<% for key in @keys %>
+	<li><%= key.key_name%> - <%= key.key_description %></li>
+<% end %>
+</ul>
+
+<%= link_to t(:link_to_types_index), :action => 'index' %>
+
+<% content_for :infobox do %>
+<p><%= t(:type_show_infobox)%></p>
+<% end %>

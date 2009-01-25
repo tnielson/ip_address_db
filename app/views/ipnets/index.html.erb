@@ -1,0 +1,46 @@
+<% if @layout== "normal" then %><h2><%= t(:ipnet_index_heading)%><%= @net %></h2><% else%><h2><%= t(:ipnet_index_search_heading)%></h2><%end%>
+
+	<% if @layout == "normal" then %>
+	<table id="tab">
+	  <%= render(:partial => "tableheadings") %>
+	  <%= render(:partial => "ipnet_net", :object => @net) %>
+	</table> 
+	 <p><%= button_to t(:link_to_ipnets_new), {:action => "new"} %></p>
+
+<% if @net.has_children?%>
+	<h3><%= t(:ipnet_index_subnets_of)%> <%= @net %></h4>
+	
+	<% form_for :ipnet, :url =>{:action => "calculate_join"} do |f| %>
+	<table id="tab">
+		<%= render(:partial => "tableheadings") %>
+				
+			<% listentry = 0 
+             for ipnet in @ipnets do 
+             listentry = listentry ^ 1 %>
+			<%= render(:partial => "ipnet", :object => ipnet, :locals => { :listentry => listentry } )%>
+			<% end %>
+			
+	</table>
+	<br />
+	<%= f.submit t(:link_to_join) %>
+	<% end %>
+	
+	<%= will_paginate @ipnets %>
+	<br />
+<% end %>
+
+	<% elsif  @layout == "suche" %>
+		<table id ="tab">
+			<%= render(:partial => "tableheadings") %>
+			<% for ipnet in @ipnets %>
+			<%= render(:partial => "ipnet", :object => ipnet)%>
+			<% end %>
+		</table>
+		<%= will_paginate @ipnets %>
+	<% end %>
+	
+<% content_for :infobox do %>
+  <p><%= t(:ipnet_index_infobox_1)%></p>
+  <p><%= t(:ipnet_index_infobox_2)%></p>
+<% end %>
+

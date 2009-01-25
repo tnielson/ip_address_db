@@ -1,0 +1,25 @@
+<html>
+<head>
+	<% @action_name = controller.action_name -%>
+	<title>Log-DB/<%= controller.controller_name -%>::<%= @action_name -%></title>
+	<%= stylesheet_link_tag 'user' %>
+</head>
+<body>
+<div id="header">
+	<h1>Log-DB 2.0 / User Control Panel</h1>
+	<p id="login">Angemeldet als: <%= @actual_user.user_name -%> </p>
+</div>
+<% if flash[:notice] then -%>
+<div id="notice">
+	<%= flash[:notice] -%>
+</div>
+<% end -%>
+<% if flash[:error] then -%>
+<div id="error">
+	<%= flash[:error] -%>
+</div>
+<% end -%>
+
+<%= yield -%>
+
+</body>

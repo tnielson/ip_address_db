@@ -1,0 +1,74 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+sto:
+  id: 		1
+  key: 		session_timeout
+  value:   	1800
+  
+diu:
+  id:       2
+  key:      deactivate_inactive_users
+  value:    1
+  
+daid:
+  id:       3
+  key:      deactivate_after_inactive_days
+  value:    35  
+  
+riu:
+  id:       4
+  key:      remind_inactive_users
+  value:    1
+  
+rdbd:
+  id:       5
+  key:      remind_days_before_deactivation
+  value:    7
+  
+ddu:
+  id:       6
+  key:      delete_deactivated_users
+  value:    1
+  
+dduadd:
+  id:       7
+  key:      delete_deactivated_users_after_deactivated_days
+  value:    20
+  
+rabd:
+  id:       8
+  key:      remind_admin_before_deletion
+  value:    1
+  
+rabdid:
+  id:       9
+  key:      remind_admin_before_deletion_in_days
+  value:    7
+  
+rubd:
+  id:       10
+  key:      remind_user_before_deletion
+  value:    0
+  
+rubdid:
+  id:       11
+  key:      remind_user_before_deletion_in_days
+  value:    7
+  
+epa:
+  id:       12
+  key:      enable_password_aging
+  value:    1
+  
+pea:
+  id:       13
+  key:      password_expires_after
+  value:    30
+  
+la:
+  id:       14
+  key:      login_attempts
+  value:    5
+  
+
+

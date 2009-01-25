@@ -1,0 +1,38 @@
+<h1><%= t(:type_edit_heading)%><%=@type.name%></h1>
+
+<%= error_messages_for :type %>
+
+<% form_for(@type) do |f| %>
+  <p>
+    <b><%= t(:typename)%></b><br />
+    <%= f.text_field :name %>
+  </p>
+  
+  <table>
+  	<tr><th><%= t(:key)%></th><th><%= t(:remove)%></th></tr>
+    <% for key in @keys %>	
+	  <tr>
+	  	<td><%=h key.key_name %></td>
+		<td><%= button_to t(:remove), :action => "destroy_habtm_relation", :type_id => @type.id, :key_id => key.id %></td>
+	  </tr>
+    <% end %>	
+  </table>
+
+  <p>
+  	<b><%= t(:type_edit_add_key)%></b>
+	<%= select("key", "key_name", Key.find(:all).collect {|p| [ p.key_name ] }, { :include_blank => false }) %> 
+  </p>	
+ 
+  <p>
+    <%= f.submit t(:update) %>
+  </p>
+<% end %>
+
+<%= link_to t(:link_to_keys_new), :controller => 'keys', :action => 'new' %>
+<%= link_to t(:back), :action => 'index' %>
+
+<% content_for :infobox do %>
+<p><%= t(:type_edit_infobox_1)%></p>
+<p><%= t(:type_edit_infobox_2)%></p>
+<p><%= t(:type_edit_infobox_3)%></p>
+<% end %>

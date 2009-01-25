@@ -1,0 +1,24 @@
+<h2><%= t(:user_login_heading)%></h2>
+
+<%= error_messages_for 'user' -%>
+
+<% form_for :user, @user, :url => { :action => "login" } do |f| %>
+<table class="form">
+   <tr>
+      <td class="label"><label for="user_name"><%= t(:username)%>: </label></td>
+      <td class="input"><%= f.text_field :user_name %></td>
+   </tr><tr>
+      <td class="label"><label for="password"><%= t(:password)%>: </label></td>
+      <td class="input"><%= f.password_field :password %></td>
+   </tr><tr>
+      <td class="button"> </td>
+      <td class="button"><%= f.submit "#{t(:user_login_signin)}" %></td>
+   </tr>
+</table>
+<% end %>
+
+<p><%= link_to(t(:link_to_users_forgot_password), :action => 'recover_password') -%></p>
+
+<% content_for :infobox do %>
+<p><%= t(:user_login_infobox)%></p>
+<% end %>

@@ -1,0 +1,21 @@
+
+	<%= button_to "Neuen Schlüssel anlegen", {:action => "new"} %>
+	<br />
+	
+	<table>
+		<tr><th>Name</th><th>Beschreibung</th></tr>
+		<% for key in @keys %>
+		<tr>
+			<td><%=h key.key_name %></td>
+			<td><%=h key.key_description %></td>
+			<td><%= button_to 'Edit', :action => 'edit', :id => key %></td>
+			<td><%= button_to 'Löschen', key, :confirm => 'Sind Sie sicher?', :method => :delete %></td>
+		</tr>
+		<% end %>
+	</table>
+	
+	<% content_for :infobox  do%>
+		<p>Schlüssel stellen Bausteine für Objekte dar. Mit ihnen können sich beliebig gewünschte Typen definieren lassen. Legen Sie zum Beispiel für den Typen Ort die Schlüssel "Name", "PLZ", "ONKZ", "Bundesland" an.</p>
+		<p>Beachten Sie: Schlüssel können von beliebigen Typen benutzt werden. Es ist also nut nötig, den oft verwendeten Schlüssel "Name" nur ein Mal zu erstellen.</p>
+		<p>Überprüfen Sie vor dem Anlegen eines neuen Schlüssels, ob das gewünschte Attribut nicht bereits existiert.</p>
+	<% end %>

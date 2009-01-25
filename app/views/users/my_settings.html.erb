@@ -1,0 +1,31 @@
+<%= render :partial => 'shared/usermenue',
+		:locals => { :active => 'Meine Einstellungen' } %>
+<h2><%= t(:user_my_settings_heading) %></h2>
+<% form_for :user, :url => { :action => 'update_my_settings' } do |f| %>
+<%= f.hidden_field(:id) %>
+<table class="form">
+   <tr>
+      <td class="label"><label for="user_name"><%= t(:username) %></label></td>
+      <td class="input"><%= h @user.user_name %></td>
+   </tr><tr>
+      <td class="label"><label for="lastname"><%= t(:lastname) %></label></td>
+      <td class="input"><%= h @user.lastname %></td>
+   </tr><tr>
+      <td class="label"><label for="firstname"><%= t(:firstname) %></label></td>
+      <td class="input"><%= h @user.firstname %></td>
+   </tr><tr>
+      <td class="label"><label for="behoerde"><%= t(:behoerde) %></label></td>
+      <td class="input"><%= f.text_field :behoerde %></td>
+   </tr><tr>
+      <td class="label"><label for="email"><%= t(:email) %></label></td>
+      <td class="input"><%= f.text_field :email %></td>
+   </tr><tr>
+      <td class="button"> </td>
+      <td class="button"><%= submit_tag t(:save) %></td>
+   </tr>
+</table>
+<% end %>
+
+<% content_for :infobox do %>
+<p><%= t(:user_my_settings_infobox) %></p>
+<% end %>

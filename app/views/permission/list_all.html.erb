@@ -1,0 +1,31 @@
+<%= render :partial => 'shared/usermenue',
+		:locals => { :active => 'Berechtigungen' } -%>
+<h2><%= t(:permission_list_all_heading)%></h2>
+
+<p><%= link_to( t(:link_to_permissions_import_actions), :action => 'import_actions') %></p>
+
+<table id="list">
+	<tr>
+		<th><%= t(:role_name) %></th><th><%= t(:controller) %></th><th><%= t(:action) %></th><th><%= t(:permission) %></th>
+	</tr>
+<%
+listentry = 0
+for r in @roles do
+	for p in r.permissions do
+	listentry = listentry ^ 1
+-%>
+	<tr class="listentry<%=listentry-%>">
+		<td><%= h r.role_name -%> </td>
+		<td><%= h p.controller_name -%></td>
+		<td><%= h p.action_name -%></td>
+		<td><%= h p.permission -%></td>
+		<td><%= link_to( t(:link_to_permissions_toggle_permission), :action => 'toggle_permission', :id => p.id)%></td>
+	</tr>
+<% end
+end -%>
+</table>
+
+<% content_for :infobox do %>
+<p><%= t(:permission_list_all_infobox_1)%></p>
+<p><%= t(:permission_list_all_infobox_2)%></p>
+<% end %>

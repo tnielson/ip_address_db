@@ -1,0 +1,14 @@
+<% if logged_in? %>
+<ul id="usermenue">
+	<li class="<%= active_page(active, 'Nutzer')-%>"><%= link_to(' Nutzer ', users_path, :only_path => false) -%></li>
+	<li class="<%= active_page(active, 'Rollen')-%>"><%= link_to(' Rollen ', roles_path, :only_path => false) -%></li>
+	<li class="<%= active_page(active, 'Berechtigungen')-%>"><%= link_to(' Berechtigungen ', :controller => 'permission', :action => 'list_all') -%></li>
+	<li class="<%= active_page(active, 'Mein Passwort')-%>"><%= link_to(' Mein Passwort ', :controller => 'users', :action => 'change_password', :id => @actual_user.id) -%></li>
+	<li class="<%= active_page(active, 'Meine Einstellungen')-%>"><%= link_to(' Meine Einstellungen ', :controller => 'users', :action => 'my_settings', :id => @actual_user.id) -%></li>
+	<% if @actual_user.is_admin? -%>
+		<li class="<%= active_page(active, 'Applikationseinstellungen')-%>"><%= link_to(' Applikationseinstellungen ', :controller => 'settings', :action => 'index') -%></li>
+		<li class="<%= active_page(active, 'User administrieren')-%>"><%= link_to(' User administrieren ', :controller => 'users', :action => 'administrate_users') -%></li>
+	<% end %>
+</ul>
+<% end %>
+<br />

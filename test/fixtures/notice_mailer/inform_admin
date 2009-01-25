@@ -1,0 +1,3 @@
+NoticeMailer#inform_admin
+
+Find me in app/views/notice_mailer/inform_admin.erb

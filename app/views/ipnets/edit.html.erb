@@ -1,0 +1,41 @@
+<h1><%= t(:ipnet_edit_heading)%><%=@ipnet%></h1>
+
+<%= error_messages_for :ipnet %>
+
+<% form_for(@ipnet) do |f| %>
+  <p>
+    <b><%= t(:name)%></b><br />
+    <%= f.text_field :name %>
+  </p>
+  
+  <p>
+    <b><%= t(:ipaddr)%></b><br />
+    <%= f.text_field :ipaddr %>
+  </p>
+  
+  <p>
+    <b><%= t(:netmask)%></b><br />
+    <%= f.text_field :netmask %>
+  </p>
+  
+ <% if @ipnet.unq? then %>
+    <%= f.hidden_field :unq, :value => true %>
+ <% elsif @ipnet.children.length != 0 then%>
+	<%= f.hidden_field :unq, :value => false %>
+ <% else %>
+   <p>
+    <b>Unique</b><br />
+    <%= f.check_box :unq%>
+  </p>
+ <% end %>
+ 
+  <p>
+    <%= f.submit t(:update) %>
+  </p>
+<% end %>
+
+<%= link_to t(:back), :action => 'index' %>
+
+<% content_for :infobox do %>
+<p><%= t(:ipnet_edit_infobox)%></p>
+<% end %>

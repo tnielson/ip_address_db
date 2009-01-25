@@ -1,0 +1,17 @@
+<%= render :partial => 'shared/usermenue',
+		:locals => { :active => 'Nutzer' } -%>
+		
+<h2><%= t(:user_edit_heading) %></h2>
+
+<%= render :partial => 'password' %>
+<%= error_messages_for 'user' -%>
+<%= render :partial => 'user' %>
+<ul>
+	<li><%= link_to t(:link_to_users_index), users_path -%></li>
+	<li><%= link_to t(:link_to_users_new), new_user_path %></li>
+</ul>
+
+<% content_for :infobox do %>
+<p><%= t(:user_edit_infobox_1) %></p>
+<p><%= t(:user_edit_infobox_2) %></p>
+<% end %>

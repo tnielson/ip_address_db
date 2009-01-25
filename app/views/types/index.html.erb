@@ -1,0 +1,20 @@
+<h1><%= t(:type_index_heading)%></h1>
+	<table>
+		<tr><th></th><th></th><th></th><th></th></tr>
+		<% for type in @types %>
+		<tr>
+			<td><%= type.name %></td>
+			<td><%= link_to t(:show), :action => "show",:id => type.id %></td>
+			<td><%= link_to t(:edit), :action => 'edit', :id => type, :method => :get %></td>
+			<td><%= button_to t(:delete), type, :confirm => t(:confirm), :method => :delete %></td>
+		</tr>
+		<% end %>
+	</table>
+	
+	<br />
+	<%= button_to t(:link_to_types_new), {:action => "new"} %>
+	
+<% content_for :infobox do %>
+  <p><%= t(:type_index_infobox)%></p>
+<% end %>
+

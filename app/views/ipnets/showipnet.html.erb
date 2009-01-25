@@ -1,0 +1,42 @@
+<div id="ipnet">
+
+<% if session[:current_ipnet] then css_highlight = Ipnet.find(session[:current_ipnet]).id else css_highlight = Ipnet.find(:first).id end%>
+
+<%  @ipnets.each do |m| puts m[:level]
+      if m[:open] -%> <!-- root Element -->
+	
+	<% if m[:id] == css_highlight then %>
+		  <ul><li>
+	<% else %>
+		  <ul><li>
+	<% end %>  
+	  	
+<%    else -%>
+
+	<% if  m[:id] == css_highlight then %>
+  		</li><li>	
+	<% else %>
+		</li><li>
+	<% end %>
+	
+<%    end -%>
+
+<% if m[:id] == css_highlight then %>
+    <%= link_to m[:name], 
+						{	:action 	=> "index",
+							:current_ipnet => m[:id],
+							:sort => params[:sort]  }, :class => "highlight" -%> 	
+<% else %>
+    <%= link_to m[:name], 
+						{	:action 	=> "index",
+							:current_ipnet => m[:id],
+							:sort => params[:sort]  } -%> 
+<% end %>							
+												
+<%    m[:close].times do -%>
+  </li></ul>
+<%    end
+    end -%>
+  </li></ul>
+
+</div>

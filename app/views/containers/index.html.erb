@@ -1,0 +1,25 @@
+<h2><%= t(:container_index_heading)%></h2>
+
+	<% form_for :container, 
+				:url => {:action => "new"},
+				:html => {:method => :post } do |f| %>	
+				<%= select("type", "name", Type.find(:all).collect {|p| [ p.name ] }, { :include_blank => false }) %> 
+	<%= f.submit t(:link_to_containers_new), :confirm => t(:container_index_confirm_new_container) %>
+	<% end %>
+	
+<br />	
+	<table>
+		<tr><th>ID</th><th><%= t(:typename)%></th></tr>
+	    <% for container in @containers %>
+		<tr>
+			<td><%= h container.id %></td>
+			<td><%= h container.type.name %></td>
+			<td><%= link_to "Details", :action => "show",:id => container.id %></td>
+			<td><%= link_to t(:delete), container, :confirm => t(:container_confirm_deletion), :method => :delete %></td>
+		</tr>
+	    <% end %>
+	</table>
+	
+<% content_for :infobox do %>
+<p><%= t(:container_index_infobox)%></p>
+<% end %>

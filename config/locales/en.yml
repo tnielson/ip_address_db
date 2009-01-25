@@ -1,0 +1,58 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+
+  ##General
+  
+          
+  ##Users
+    ##Datensatz
+    username: "a"
+    firstname: "b"
+    lastname: "c"
+    email: "d"
+    behoerde: "e"
+    
+    ##welcome
+    welcome: "Welcome to the IP-Manager Application"
+    link_to_login: "You can reach the Login-Form"
+    link_to_login_name: "here"
+    please_login: "In order to use the application, please log-in."
+    
+    ##login
+    
+    ##index
+    
+    ##new
+    
+    ##create
+    
+    ##change_password
+    
+    ##edit
+    
+    ##my_settings
+    
+    ##recover_password
+    
+    ##show
+  
+  ##Ipnets
+    ##Datensatz
+    ipaddr: ""
+    netmask: ""
+    unq: ""
+    ipnet_description: ""
+  
+  ##Containers
+    ##Datensatz
+  
+  ##Types
+    ##Datensatz
+  
+  ##Keys 
+    ##Datensatz
+    key_name: ""
+    key_description: ""
+

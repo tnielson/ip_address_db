@@ -1,0 +1,31 @@
+<%= render :partial => 'shared/usermenue',
+		:locals => { :active => 'Rollen' } -%>
+<h2><%= t(:role_index_heading) %></h2>
+
+<table id="list">
+	<tr>
+		<th><%= t(:role_name) %></th><th><%= t(:description) %></th>
+	</tr>
+<%
+listentry = 0
+for r in @roles do
+listentry = listentry ^ 1
+-%>
+	<tr class="listentry<%=listentry-%>">
+		<td><%= h r.role_name -%></td>
+		<td><%= h r.description -%></td>
+		<td><%= link_to( t(:edit), edit_role_path(r)) -%></td>
+		<td><%= link_to( t(:permissions), {:controller => 'permission', :action => 'list', :id => r.id}) -%></td>
+		<td><%= link_to( t(:delete), r, :confirm => t(:role_confirm_deletion), :method => :delete) -%></td>
+	</tr>
+<% end -%>
+</table>
+
+<ul id="navigation">
+	<li><%= link_to t(:link_to_roles_new), new_role_path %></li>
+</ul>
+
+<% content_for :infobox do %>
+<p><%= t(:role_index_infobox_1) %></p>
+<p><%= t(:role_index_infobox_2) %></p>
+<% end %>

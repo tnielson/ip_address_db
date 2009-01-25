@@ -1,0 +1,14 @@
+<ul id="containermenue">
+<% if logged_in? -%>
+	<li><%= link_to(' IP-Applikation ', :controller => 'ipnets', :action => 'index', :only_path => false) -%></li>
+<% end -%>
+	<li><%= link_to(' UserHome ', :controller => 'users', :action => 'welcome', :only_path => false) -%></li>
+<% if logged_in? -%>
+	<li><%= link_to(' Container ', :controller => 'containers', :action => 'index') -%></li>
+	<li><%= link_to(' Type ', :controller => 'types', :action => 'index') -%></li>
+	<li><%= link_to(' Key ', :controller => 'keys', :action => 'index') -%></li>
+<li><%= link_to(' Logout ', :controller => 'users', :action => 'logout') -%></li>
+<% else -%>
+	<li><%= link_to(' Login ', :controller => 'users', :action => 'login') -%></li>
+<% end -%>	
+</ul>

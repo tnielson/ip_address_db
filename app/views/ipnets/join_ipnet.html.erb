@@ -1,0 +1,36 @@
+<%= error_messages_for :ipnet %>
+
+<p><%= t(:ipnet_join_ipnet_heading)%></p>
+<table id="tab">
+<tr><th>ID</th><th><%= t(:name)%></th><th><%= t(:ipaddr)%></th><th><%= t(:netmask)%></th><th><%= t(:unq)%></th></tr>
+<% listentry = 0
+   for ipnet in @ipnets do
+   listentry = listentry ^ 1 %>
+  <tr>
+	<td><%=h ipnet.id %></td>
+	<td><%=h ipnet.name %></td>
+	<td><%=h ipnet.ipaddr%></td>
+	<td><%=h ipnet.netmask%></td>
+	<td><%=h ipnet.unq %></td>
+  </tr>
+<% end %>
+</table>
+
+<p><%= t(:ipnet_join_ipnet_look_of_new_net)%></p>
+<table id="tab">
+	<tr><th>ID</th><th><%= t(:name)%></th><th><%= t(:ipaddr)%></th><th><%= t(:netmask)%></th><th><%= t(:unq)%></th></tr>
+	<tr>
+		<td class="listentry1"><%= @first.id %></td>
+		<td><%= @first.name %></td>
+		<td><%= @ip_new_object.ip %></td>
+		<td><%= @ip_new_object.netmask_ext %></td>
+		<td><%= @first.unq %></td>
+	</tr>
+</table>
+
+<%= link_to t(:merge), { :action => "packzusammen", :last => @last, :first => @first, :ip_new => @ip_new_object.ip, :netmask_new => @ip_new_object.netmask_ext }, :confirm => "Sollen die Netze wirklich zusammengefasst werden?" %>
+<%= link_to t(:back), {:action => "index"}, :confirm => "Join verwerfen?"%>
+
+<% content_for :infobox do %>
+<p><%= t(:ipnet_join_ipnet_infobox)%></p>
+<% end %>

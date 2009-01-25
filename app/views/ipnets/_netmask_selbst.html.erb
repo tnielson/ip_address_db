@@ -1,0 +1,21 @@
+<p>
+  <b>Netzmaske</b><br />
+  <%= text_field :netmask %>
+</p>
+
+
+
+ 	<p>
+		<b>Netzmaskenauswahl</b>
+		<%= select 'netmask_select', 'id', %w{selbst vorgegeben}, {}, 
+			{ :onchange => remote_function( :with => "value",
+																:url => { :action => 'update_netmask',
+																		  :controller => 'ipnets'},
+																		  :update => 'netmask_select',
+																		  :value => 'selbst'	)} %>
+
+<div id="netmask_select">
+	<p>Noch nix</p>
+ </div> 
+
+

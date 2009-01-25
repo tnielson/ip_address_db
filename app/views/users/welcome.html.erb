@@ -1,0 +1,7 @@
+<h2><%= t(:user_welcome_heading) %></h2>
+
+<p><%= t(:link_to_users_login) %> <%= link_to t(:link_to_users_login_linkname), :action => 'login'%></p>
+
+<% content_for :infobox do %>
+<p><%= t(:user_welcome_infobox) %></p>
+<% end %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  container_id: 1
+  key_id: keys(:name).id
+  value: Kiel
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+two:
+  container_id: 1
+  key_id: keys(:plz).id
+  value: 24103
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+three:
+  container_id: 1
+  key_id: keys(:straße).id
+  value: Kronshagener Weg
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+four:
+  container_id: 1
+  key_id: keys(:hausnummer).id
+  value: 105
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09

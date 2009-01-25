@@ -1,0 +1,11 @@
+<h1><%= t(:container_show_heading)%><%=@container.id%></h1>
+
+<p><%= t(:typename)%>: <%= @container.type.name %></p><br />
+
+<ul>
+  <% for attri in @attris %>
+  	<li><%= Key.find(attri.key_id).key_name %> <%= attri.value %></li>
+  <% end %>
+</ul>
+
+<%= link_to t(:back), :action => 'index' %>

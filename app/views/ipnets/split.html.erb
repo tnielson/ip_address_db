@@ -1,0 +1,37 @@
+<%= error_messages_for :ipnet %>
+
+<p>Zu splittendes Netz:</p>
+<table id="tab">
+	<tr><td>Name:</td><td><%= @net.name%></td></tr>
+	<tr><td>IP:</td><td><%= @net.ipaddr%></td></tr>	
+	<tr><td>Netzmaske:</td><td><%= @net.netmask%></td></tr>		
+</table>
+<br />
+
+
+
+	<% form_for :net, 
+				:url => {:action => "split"},
+				:html => {:method => :post } do |f| %>		
+		<%= select("split_method", :option, [  ['Durch manuelle Netzmaske','netmask'],['In der Mitte','middle']  ])%>
+		<%= f.hidden_field :ipnet, :value => @net.id %>
+		<%= text_field_tag :ipnet_netmask %>
+	<%= f.submit "Split", :confirm => "Soll der Split wirklich durchgeführt werden?" %>
+	<% end %>
+
+<br/>
+
+	<table id="tab">
+		<%= render (:partial => "tableheadings") %>
+			<% listentry = 0
+               for ipnet in @children do
+               listentry = listentry ^ 1 %>
+			<%= render(:partial => "split_ipnet", :locals => { :ipnet => ipnet, :listentry => listentry})%>
+			<% end %>
+	</table>
+
+<%= link_to 'Index', :action => 'index', :selected => @back %>
+
+<% content_for :infobox do %>
+  <p>Noch kein Inhalt</p>
+<% end %>

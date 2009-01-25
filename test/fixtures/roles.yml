@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+admin:
+  role_name: Administrator
+  description: Superuser des Systems
+  created_at: 2009-01-07 15:14:08
+  updated_at: 2009-01-07 15:14:08
+  
+gast:
+  role_name: Gast
+  description: Berechtigungen f&uuml;r nicht eingeloggte User
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09

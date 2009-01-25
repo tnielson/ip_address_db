@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+superuser:
+  user_name: Superuser
+  lastname: user
+  firstname: Super
+  password_salt: TestSalt01
+  password_hash: <%= Digest::MD5.hexdigest('Start123' + 'TestSalt01') %>
+  email: tom.nielson@t-systems.com
+  created_at: 2009-01-07 15:14:10
+  updated_at: 2009-01-07 15:14:10
+  role: admin
+  behoerde: T-Systems

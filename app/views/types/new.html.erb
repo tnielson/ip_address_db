@@ -1,0 +1,17 @@
+<h1><%= t(:type_new_heading)%></h1>
+
+<%= error_messages_for :type %>
+
+<% form_for(@type) do |f| %>
+  <p>
+    <b><%= t(:typename)%></b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit t(:create) %>
+  </p>
+<% end %>
+
+<%= link_to t(:link_to_types_index), :action => 'index' %>
+

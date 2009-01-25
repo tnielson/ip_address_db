@@ -1,0 +1,23 @@
+- password aging - done? -> testing - Test schreiben
+- define a default start-up page with no login required (configurable)
+- enable logging information on all critical points - eigene Logdatei!
+-- manipulative usage of my_settings/change_password (nicht eingeloggt und direkt pw ännderung anspricht, ins log und mail auslösen! wenn jmd als user x eingeloggt und user y settings abgreift)
+- PermissionController#list_all => folding and unfolding roles
+- make Default-Page configurable by program
+- sort output PermissionController#list and #list_all
+- add new action to "search for new actions" manually or change existing searchalgorithm
+- setting: last_passwords implementieren -> Standard 5 konfigurierbar  (1-5)
+- password updated on auf Default setzen! implementiert in password neu setzen?
+- registration confirmation -> valid emails (@t-systems.com, etc..) -> erstmal weg, confirm ja
+
+- Urlaubsmodus? weglassen
+
+
+- Actionmailer:
+  - create model, configure AM and create/change templates -> done for gmail
+  - notify Users, Admin before deactivation -> done
+  - notify Users, Admin before deletion -> done
+  - enable password recovery? -> action done -> settings?
+  - Admin send Mails to (all) Users -> Model? Implement View -> nice to have -> später
+
+  

@@ -1,0 +1,29 @@
+<h1>Neuen Container anlegen</h1>
+
+<%= error_messages_for :container %>
+
+<% form_for(@container) do |f| %>
+
+  <%= f.hidden_field :type_id, :value => @type.id %>
+  
+<table>
+	<tr><th>Bezeichnung</th><th>Wert</th></tr>
+
+    <% for key in @keys %>
+		<tr>
+			<td><%= text_field(:attri, :key, :value => key.key_name) %></td>
+			<td><%= text_field(:attri, :value) %></td>
+	   </tr>
+	<% end %>
+
+</table>	
+
+</ul>	
+	
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Zurück', :action => 'index' %>
+

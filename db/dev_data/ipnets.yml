@@ -1,0 +1,188 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+root:
+  id: 		1
+  name: 		root
+  ipaddr:   	0.0.0.0
+  netmask:  	0.0.0.0
+  unq:            0
+  parent_id: 	NULL
+  lft:         	1
+  rgt:          	34
+  lvl:            0
+  
+test:
+  id: 		2
+  name: 		test
+  ipaddr:   	1.0.0.0
+  netmask:  	255.0.0.0
+  unq:            0
+  parent_id: 	1
+  lft:            2
+  rgt:            33
+  lvl:            1
+
+eins:
+  id: 		3
+  name: 		eins
+  ipaddr:   	1.0.0.0
+  netmask:  	255.255.255.0
+  unq:            0
+  parent_id: 	2
+  lft:            9
+  rgt:            14
+  lvl:            2
+   
+zwei:
+  id: 		4
+  name: 		zwei
+  ipaddr:   	1.0.1.0
+  netmask:  	255.255.255.0
+  unq:            0
+  parent_id: 	2
+  lft:            27
+  rgt:            32
+  lvl:            2
+  
+drei:
+  id: 		5
+  name: 		drei
+  ipaddr:   	1.0.2.0
+  netmask:  	255.255.255.0
+  unq:            0
+  parent_id: 	2
+  lft:            3
+  rgt:            8
+  lvl:            2
+  
+vier:
+  id: 		6
+  name: 		vier
+  ipaddr:   	1.0.3.0
+  netmask:  	255.255.255.0
+  unq:            0
+  parent_id:      2
+  lft:            21
+  rgt:            26
+  lvl:            2
+  
+fuenf:
+  id: 		7
+  name:           fuenf
+  ipaddr:         1.0.4.0
+  netmask:        255.255.255.0
+  unq:            0
+  parent_id:      2
+  lft:            15
+  rgt:            20
+  lvl:            2 
+
+einseins:
+  id: 		8
+  name:           eins1
+  ipaddr:         1.0.0.1
+  netmask:        255.255.255.254
+  unq:            0
+  parent_id:      3
+  lft:            10
+  rgt:            11
+  lvl:            3 
+
+einszwei:
+  id: 		9
+  name:           eins2
+  ipaddr:         1.0.0.2
+  netmask:        255.255.255.254
+  unq:            0
+  parent_id:      3
+  lft:            12
+  rgt:            13
+  lvl:            3
+
+zweieins:
+  id: 		10
+  name:           zwei1
+  ipaddr:         1.0.1.1
+  netmask:        255.255.255.254
+  unq:            0
+  parent_id:      4
+  lft:            28
+  rgt:            29
+  lvl:            3
+
+zweizwei:
+  id: 		11
+  name:           zwei2
+  ipaddr:         1.0.1.2
+  netmask:        255.255.255.254
+  unq:            0
+  parent_id:      4
+  lft:            30
+  rgt:            31
+  lvl:            3 
+
+dreieins:
+  id: 		12
+  name:           drei1
+  ipaddr:         1.0.2.1
+  netmask:        255.255.255.254
+  unq:            0
+  parent_id:      5
+  lft:            4
+  rgt:            5
+  lvl:            3
+
+dreizwei:
+  id: 		13
+  name:           drei2
+  ipaddr:         1.0.2.2
+  netmask:        255.255.255.254
+  unq:            0
+  parent_id:      5
+  lft:            6
+  rgt:            7
+  lvl:            3
+
+viereins:
+  id: 		14
+  name:           vier1
+  ipaddr:         1.0.3.1
+  netmask:        255.255.255.254
+  unq:            0
+  parent_id:      6
+  lft:            22
+  rgt:            23
+  lvl:            3 
+
+vierzwei:
+  id: 		15
+  name:           vier2
+  ipaddr:         1.0.3.2
+  netmask:        255.255.255.254
+  unq:            0
+  parent_id:      6
+  lft:            24
+  rgt:            25
+  lvl:            3   
+
+fuenfeins:
+  id: 		16
+  name:           fuenf1
+  ipaddr:         1.0.4.1
+  netmask:        255.255.255.254
+  unq:            0
+  parent_id:      7
+  lft:            16
+  rgt:            17
+  lvl:            3   
+
+fuenfzwei:
+  id: 		17
+  name:           fuenf2
+  ipaddr:         1.0.4.2
+  netmask:        255.255.255.254
+  unq:            0
+  parent_id:      7
+  lft:            18
+  rgt:            19
+  lvl:            3 

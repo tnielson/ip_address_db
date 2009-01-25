@@ -1,0 +1,68 @@
+/*****************************
+Generelle Vorgaben
+*****************************/
+body {
+  font-family: Verdana, Helvetica;
+}
+
+/**************************
+Kopfbereich der Seite
+***************************/
+div#header {
+  background: #11dd33;
+}
+
+h1 {
+  color: #dddddd;
+  padding-left: 0.5em;
+}
+
+p#login {
+  font-size: smaller;
+  text-align: right;
+  padding-right: 1em;
+}
+
+/* Messageboxen für flash[:notice] und flash[:error] */
+div#notice {
+  color: #eeeeee;
+  background: #11ff33;
+  font-weight: bold;
+}
+
+div#error {
+  color: #dddddd;
+  background: #ff3333;
+  font-weight: bold;
+}
+
+/***************************
+Menueeintraege sauber darstellen
+****************************/
+ul#usermenue {
+  padding: 1px;
+  margin: 1px;
+  list-style: none;
+  font-size: smaller;
+}
+
+ul#usermenue li.active {
+  display: inline;
+  background: #11dd33;
+}
+
+ul#usermenue li.inactive {
+  display: inline;
+  background: #dddddd;
+}
+
+/**************************
+Tabellen für Listenausgaben
+**************************/
+tr.listentry0 {
+  background: #aaffaa;
+}
+
+tr.listentry1 {
+  background: #cccccc;
+}

@@ -1,0 +1,34 @@
+<%= render :partial => 'shared/usermenue',
+		:locals => { :active => 'Nutzer' } -%>
+<h2><%= t(:user_show_heading)%></h2>
+<%= error_messages_for 'user' -%>
+<table class="form">
+   <tr>
+      <td class="label"><%= t(:username)%></td>
+      <td class="input"><%= h @user.user_name %></td>
+   </tr><tr>
+      <td class="label"><%= t(:lastname)%></td>
+      <td class="input"><%= h @user.lastname %></td>
+   </tr><tr>
+      <td class="label"><%= t(:firstname)%></td>
+      <td class="input"><%= h @user.firstname %></td>
+   </tr><tr>
+   	  <td class="label"><%= t(:behoerde)%></td>
+	  <td class="input"><%= h @user.behoerde %></td>
+   </tr><tr>
+      <td class="label"><%= t(:email)%></td>
+      <td class="input"><%= h @user.email %></td>
+   </tr><tr>
+      <td class="label"><%= t(:role_name)%></td>
+      <td class="input"><%= h @user.role.role_name %></td>
+   </tr>
+</table>
+
+<ul>
+	<li><%= link_to t(:link_to_users_index), users_path -%></li>
+	<li><%= link_to t(:link_to_users_edit), edit_user_path(@user) -%></li>
+</ul>
+
+<% content_for :infobox do %>
+<p><%= t(:user_show_infobox)%></p>
+<% end %>

@@ -1,0 +1,112 @@
+<%= render :partial => 'shared/usermenue',
+		:locals => { :active => 'Applikation' } -%>
+<h2><%= t(:setting_edit_heading)%></h2>
+<p><%= link_to('Index', :controller => 'settings', :action => 'index') -%></p>
+<% form_tag(:action => 'update') do %>
+<table id="list">
+	<tr>
+		<th> Nr. </th><th> Parameter </th><th> Wert </th><th> Bemerkung </th>
+	</tr>
+	<tr>
+		<td> 01. </td>
+		<td> Session Timeout in Sekunden: </td>
+		<td> <%= text_field_tag :session_timeout, @settings["session_timeout"], :size => 6, :max_length => 6 -%> </td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td> 02. </td>
+		<td> Sollen Passworte altern? </td>
+		<td> <%= select_tag(:enable_password_aging, select_options_jn(int_to_jn(@settings["enable_password_aging"]))) -%> </td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td> 03. </td>
+		<td> Passworterneuerung nach wieviel Tagen? </td>
+		<td> <%= text_field_tag :password_expires_after, @settings["password_expires_after"], :size => 6, :max_length => 6 -%> </td>
+		<td> Hat keine Auswirkungen bei 02. => Nein </td>
+	</tr>
+	<tr>
+		<td> 04. </td>
+		<td> Maximalzahl der Login-Fehlversuche vor Deaktivierung: </td>
+		<td> <%= text_field_tag :login_attempts, @settings["login_attempts"], :size => 6, :max_length => 6 -%> </td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td> 05. </td>
+		<td> Startseite der Applikation: </td>
+		<td> <%= text_field_tag :default_page, @settings["default_page"], :size => 20 -%> </td>
+		<td> </td>		
+	<tr>
+	<tr>
+		<td colspan= "4"><hr/></td>
+	</tr>
+	<tr>
+		<td> 06. </td>
+		<td> Inaktive Nutzer automatisch deaktivieren? </td>
+		<td> <%= select_tag(:deactivate_inactive_users, select_options_jn(int_to_jn(@settings["deactivate_inactive_users"]))) -%> </td>
+	</tr>
+	<tr>
+		<td> 07. </td>
+		<td> Inaktive Nutzer nach wieviel Tagen deaktivieren? </td>
+		<td> <%= text_field_tag :deactivate_after_inactive_days, @settings["deactivate_after_inactive_days"], :size => 6, :max_length => 6 -%> </td>
+		<td> Hat keine Auswirkungen bei 06. => Nein </td>
+	</tr>
+	<tr>
+		<td> 08. </td>
+		<td> Sollen inaktive Nutzer vor der Deaktivierung benachrichtigt werden? </td>
+		<td> <%= select_tag(:remind_inactive_users, select_options_jn(int_to_jn(@settings["remind_inactive_users"]))) -%> </td>
+		<td> Hat keine Auswirkungen bei 06. => Nein </td>
+	</tr>
+	<tr>
+		<td> 09. </td>
+		<td> Benachrichtigung wieviel Tage vor Deaktivierung? </td>
+		<td> <%= text_field_tag :remind_days_before_deactivation, @settings["remind_days_before_deactivation"], :size => 6, :max_length => 6 -%> </td>
+		<td> Hat keine Auswirkungen bei 08. => Nein </td>
+	</tr>
+	<tr>
+		<td colspan= "4"><hr/></td>
+	</tr>
+	<tr>
+		<td> 10. </td>
+		<td> Sollen deaktivierte Nutzer automatisch gel&ouml;scht werden? </td>
+		<td> <%= select_tag(:delete_deactivated_users, select_options_jn(int_to_jn(@settings["delete_deactivated_users"]))) -%> </td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td> 11. </td>
+		<td> Deaktivierte Nutzer nach wieviel Tagen l&ouml;schen? </td>
+		<td> <%= text_field_tag :delete_deactivated_users_after_deactivated_days, @settings["delete_deactivated_users_after_deactivated_days"], :size => 6, :max_length => 6 -%> </td>
+		<td> Hat keine Auswirkungen bei 10. => Nein </td>
+	</tr>
+	<tr>
+		<td> 12. </td>
+		<td> Benachrichtigung an Gruppe Admin vor automatischer Nutzerl&ouml;schung? </td>
+		<td> <%= select_tag(:remind_admin_before_deletion, select_options_jn(int_to_jn(@settings["remind_admin_before_deletion"]))) -%> </td>
+		<td> Hat keine Auswirkungen bei 10. => Nein </td>
+	</tr>
+	<tr>
+		<td> 13. </td>
+		<td> Wieviel Tage vor der L&ouml;schung sollen die Admins benachrichtigt werden? </td>
+		<td> <%= text_field_tag :remind_admin_before_deletion_in_days, @settings["remind_admin_before_deletion_in_days"], :size => 6, :max_length => 6 -%> </td>
+		<td> Hat keine Auswirkungen bei 10. => Nein </td>
+	</tr>
+	<tr>
+		<td> 14. </td>
+		<td> Benachrichtigung an deaktivierte Nutzer vor L&ouml;schung? </td>
+		<td> <%= select_tag(:remind_user_before_deletion, select_options_jn(int_to_jn(@settings["remind_user_before_deletion"]))) -%> </td>
+		<td> Hat keine Auswirkungen bei 10. => Nein </td>
+	</tr>
+	<tr>
+		<td> 15. </td>
+		<td> Nutzerbenachrichtigung wieviel Tage vorher? </td>
+		<td> <%= text_field_tag :remind_user_before_deletion_in_days, @settings["remind_user_before_deletion_in_days"], :size => 6, :max_length => 6 -%> </td>
+		<td> Hat keine Auswirkungen bei 14. => Nein </td>
+	</tr>
+</table>
+<br />
+<%= submit_tag t(:save) %>
+<% end %>
+
+<% content_for :infobox do %>
+<p><%= t(:setting_edit_infobox) %></p>
+<% end %>

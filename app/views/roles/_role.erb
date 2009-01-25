@@ -1,0 +1,14 @@
+<% form_for role do |f| %>
+<table class="form">
+   <tr>
+      <td class="label"><label for="role_name"><%= t(:role_name) %>: </label></td>
+      <td class="input"><%= f.text_field :role_name %></td>
+   </tr><tr>
+      <td class="label"><label for="description"><%= t(:description) %>: </label></td>
+      <td class="input"><%= f.text_field :description %></td>
+   </tr><tr>
+      <td class="button"> </td>
+      <td class="button"><%= f.submit t(:save)%></td>
+   </tr>
+</table>
+<% end %>

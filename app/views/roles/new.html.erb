@@ -1,0 +1,16 @@
+<%= render :partial => 'shared/usermenue',
+		:locals => { :active => 'Rollen' } -%>
+<h2><%= t(:role_new_heading) %></h2>
+
+<%= error_messages_for 'roles' -%>
+
+<%= render :partial => 'role' %>
+
+<ul>
+	<li><%= link_to t(:link_to_roles_index), roles_path -%></li>
+</ul>
+
+<% content_for :infobox do %>
+<p><%= t(:role_new_infobox_1) %></p>
+<p><%= t(:role_new_infobox_2) %></p>
+<% end %>

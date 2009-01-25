@@ -1,0 +1,3 @@
+-- last login aging (configurable) -> done -> Designproblem
+-- activating/deactivating users (including reason and timestamp) -> userdata -> nearly done, change reason manually -> Reason sonst Standard, Welcher User (Acc)
+- deactivate user by - done -> Werte aus Settings mit übernehmen (soll gelöscht oder nur erinnert werden?), Mailservices integrieren

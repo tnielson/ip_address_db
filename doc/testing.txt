@@ -1,0 +1,3 @@
+- compare new password against the last three ones -> done -> testing
+-- disable new password basing on comparsion above - done -> testing
+- make timeout sessions configurable by program - done -> testing

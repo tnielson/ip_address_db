@@ -1,0 +1,7 @@
+- timeout sessions - done
+- add last login to model user -> new model userdata -> done 
+-- manual deactivation through admin -> done
+-- password faults (configurable) -> done
+- add permissions to YAUL - done
+- make timeout sessions configurable by program - done  
+- link bei useradmin ändern - done

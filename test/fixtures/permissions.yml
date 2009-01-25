@@ -1,0 +1,137 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+##Superuser
+
+##IpnetsController
+su.ipnet.index:
+  role: admin
+  controller_name: IpnetsController
+  action_name: index
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+su.ipnet.new:
+  role: admin
+  controller_name: IpnetsController
+  action_name: new
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+su.ipnet.create:
+  role: admin
+  controller_name: IpnetsController
+  action_name: create
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+su.ipnet.edit:
+  role: admin
+  controller_name: IpnetsController
+  action_name: edit
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+su.ipnet.update:
+  role: admin
+  controller_name: IpnetsController
+  action_name: update
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+
+##UsersController
+su.user.index:
+  role: admin
+  controller_name: UsersController
+  action_name: index
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+su.user.new:
+  role: admin
+  controller_name: UsersController
+  action_name: new
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+su.user.create:
+  role: admin
+  controller_name: UsersController
+  action_name: create
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+su.user.edit:
+  role: admin
+  controller_name: UsersController
+  action_name: edit
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+su.user.update:
+  role: admin
+  controller_name: UsersController
+  action_name: update
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+##Superuser
+
+##IpnetsController
+su.ipnet.index:
+  role: admin
+  controller_name: IpnetsController
+  action_name: index
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+su.ipnet.new:
+  role: admin
+  controller_name: IpnetsController
+  action_name: new
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+su.ipnet.create:
+  role: admin
+  controller_name: IpnetsController
+  action_name: create
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+su.ipnet.edit:
+  role: admin
+  controller_name: IpnetsController
+  action_name: edit
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+  
+su.ipnet.update:
+  role: admin
+  controller_name: IpnetsController
+  action_name: update
+  permission: allow
+  created_at: 2009-01-07 15:14:09
+  updated_at: 2009-01-07 15:14:09
+
+
+
+
+

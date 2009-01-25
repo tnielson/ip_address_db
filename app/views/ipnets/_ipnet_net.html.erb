@@ -1,0 +1,16 @@
+<tr class="listentry1">
+<td class="nobackground"></td>
+<td><%= @net.id %></td>
+<td><%= @net.name %></td>
+<td><%= @net.ipaddr%></td>
+<td><%= @net.netmask%></td>
+<td><%= @net.description%></td>
+<td><%= @net.unq %></td>
+<td class="nobackground"><%= button_to t(:edit), :action => 'edit', :id => @net.id, :back => @net.id %></td>
+<% if @net.name != 'root' then%>
+  <td class="nobackground"><%= button_to t(:delete), @net, :confirm => t(:ipnet_confirm_deletion), :method => :delete %></td>
+  <td class="nobackground"><%= button_to t(:split), :action => 'split', :id => @net.id, :back => @net.id %></td>
+<% end %>
+</tr>
+
+

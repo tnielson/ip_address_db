@@ -1,0 +1,20 @@
+<ul>
+	<li><%= link_to('Home', :controller => 'users', :action => 'welcome', :only_path => false) -%></li>
+		
+	<% if logged_in? -%>
+	<li><%= link_to('IP-Netze', :controller => 'ipnets', :action => 'index', :only_path => false) -%></li>
+	<li><%= link_to('Container', :controller => 'containers', :action => 'index', :only_path => false) -%></li>
+	<li><%= link_to('Typen', :controller => 'types', :action => 'index', :only_path => false) -%></li>
+	<li><%= link_to('Schlüssel', :controller => 'keys', :action => 'index', :only_path => false) -%></li>		
+	<li><%= link_to('Einstellungen', :controller => 'users', :action => 'my_settings', :id => @actual_user.id) -%></li>
+	<li><%= link_to('Logout', :controller => 'users', :action => 'logout') -%></li>
+		
+		<% if @actual_user.is_admin? %>
+	    <li><%= link_to('User CP', users_path, :only_path => false) -%></li>
+	    <li><%= link_to('Passwort', :controller => 'users', :action => 'change_password', :id => @actual_user.id) -%></li>
+	    <% end %>
+		
+	<% else %>
+	<li><%= link_to('Login', :controller => 'users', :action => 'login') -%></li>
+	<% end %>		
+</ul>

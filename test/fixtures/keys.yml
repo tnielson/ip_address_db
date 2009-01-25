@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+name:
+  key_name: name
+  key_description: Name des Standortes
+  created_at: 2009-01-07 15:20:46
+  updated_at: 2009-01-07 15:20:46
+  
+plz:
+  key_name: plz
+  key_description: Postleitzahl der Standortes
+  created_at: 2009-01-07 15:20:46
+  updated_at: 2009-01-07 15:20:46
+  
+straße:
+  key_name: straße
+  key_description: Straße des Standortes
+  created_at: 2009-01-07 15:20:46
+  updated_at: 2009-01-07 15:20:46
+  
+hausnummer:
+  key_name: hausnummer
+  key_description: Hausnummer des Standortes
+  created_at: 2009-01-07 15:20:46
+  updated_at: 2009-01-07 15:20:46

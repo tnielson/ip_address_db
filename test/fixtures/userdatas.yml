@@ -1,0 +1,18 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+superuser_udata:
+  user_id: 1
+  last_login: 2009-01-08 12:43:27
+  deactivated: 0
+  deactivation_reason: freigegeben
+  deactivation_date: 2009-01-07 14:40:08
+  default_startpage:
+  password1_salt:
+  password1_hash:
+  password2_salt:
+  password2_hash:
+  password3_salt:
+  password3_hash:
+  password_updated_on: 2009-01-07 14:40:08
+  password_faults: 0
+  navigation: 0

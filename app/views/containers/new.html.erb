@@ -1,0 +1,25 @@
+<h1><%= t(:container_new_heading)%></h1>
+
+<%= error_messages_for :container %>
+
+<% form_for(@container) do |f| %>
+
+  <%= f.hidden_field :type_id, :value => @type.id %>
+  
+	<% @counter = 1 %>
+    <% for key in @keys %>
+		<%= key.key_name %>: <%= text_field(@counter, :value) %>
+		<%= hidden_field @counter, :key_id, :value => key.id %>
+		<% @counter += 1 %>
+	<% end %>
+	
+  <p>
+    <%= f.submit t(:create) %>
+  </p>
+<% end %>
+
+<%= link_to t(:back), :action => 'index' %>
+
+<% content_for :infobox do %>
+<p><%= t(:container_new_infobox)%></p>
+<% end %>

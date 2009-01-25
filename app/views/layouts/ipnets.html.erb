@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  	<% @action_name = controller.action_name -%>
+	<% content = controller.controller_name %>
+	<title>IP-DB/<%= controller.controller_name -%>::<%= @action_name -%></title>
+	<%= stylesheet_link_tag 'scaffold.css', 'css_ohne_navi' %>
+   <%= javascript_include_tag 'prototype' %>
+   <script type="text/javascript" src="/javascripts/swfobject.js"></script>
+</head>
+
+
+<body id="home">
+
+<div id="pagebox">
+
+	<div id="header">
+		<p id="login">Angemeldet als: <%= @actual_user.user_name -%> </p>
+	</div>
+	
+	<div id="topmenue">
+	    <%= render(:partial => "shared/menue") %>
+	</div>
+	
+	<% if logged_in? %>
+	<div id="suchleiste">
+		<%= render(:partial => "shared/suchleiste") %>
+	</div>
+	<% end %>	
+	
+	<div id="content" class="<%=content-%>">
+				
+		<%= showpath(session[:current_object]) if controller.controller_name == "ipnets" or controller.controller_name == "containers" %>
+		
+		<% if flash[:error] %>
+		<div id="error"><%= flash[:error] %></div>
+		<% elsif flash[:notice]%>
+		<div id="notice"><%= flash[:notice] %></div>
+		<%end%>
+		
+	  <div id="infobox">
+	  	<h4>Infobox</h4>
+		<%= yield :infobox %>
+	  </div>
+	  
+		<%= yield  %>	
+	
+	</div>	
+		
+	
+</div>
+
+<% logger.info("        #### ENDE #### VIEW: Layout #### ENDE ####") %>
+</body>
+</html>

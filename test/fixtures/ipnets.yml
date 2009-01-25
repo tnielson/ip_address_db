@@ -1,0 +1,60 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+root:
+  name: 		root
+  ipaddr:   	0.0.0.0
+  netmask:  	0.0.0.0
+  parent_id: 	NULL
+  lft:          1
+  rgt:          14
+  
+A:
+  name: 		A
+  ipaddr:   	10.0.0.0
+  netmask:  	255.0.0.0
+  parent_id: 	1
+  lft:          2
+  rgt:          7
+
+B:
+  name: 		B
+  ipaddr:   	172.0.0.0
+  netmask:  	255.0.0.0
+  parent_id: 	1
+  lft:          8
+  rgt:          13
+  unq:          1
+   
+Aa:
+  name: 		Aa
+  ipaddr:   	10.1.0.0
+  netmask:  	255.255.0.0
+  parent_id: 	2
+  lft:          3
+  rgt:          4
+  
+Ab:
+  name: 		Ab
+  ipaddr:   	10.2.0.0
+  netmask:  	255.255.0.0
+  parent_id: 	2
+  lft:          5
+  rgt:          6
+  
+Ba:
+  name: 		Ba
+  ipaddr:   	172.1.0.0
+  netmask:  	255.255.0.0
+  parent_id:    3
+  lft:          9
+  rgt:          10
+  unq:          1
+  
+Bb:
+  name:         Bb
+  ipaddr:       172.2.0.0
+  netmask:      255.255.0.0
+  parent_id:    3
+  lft:          11
+  rgt:          12
+  unq:          1

@@ -1,0 +1,25 @@
+<h1>Neuen Schlüssel anlegen</h1>
+
+<%= error_messages_for :key %>
+
+<% form_for(@key) do |f| %>
+  <p>
+    <b>Schlüsselname</b><br />
+    <%= f.text_field :key_name %>
+  </p>
+  
+  <p>
+    <b>Beschreibung</b><br />
+    <%= f.text_field :key_description %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Index', :action => 'index' %>
+
+<% content_for :infobox do %>
+	<p>Um gleiche Schlüssel zu vermeiden, geben Sie dem Schlüssel bitte eine aussagekräftige Beschreibung.</p>
+<% end %>

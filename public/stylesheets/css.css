@@ -1,0 +1,227 @@
+/* *{ margin: 0; padding: 0; } /* Alle Abstände resetten*/
+
+html
+    {
+    	height: 100%;
+    }
+
+body
+	{
+		 height: 100%;
+         text-align: center; /* damit auch der IE die DIVs zentriert*, allerdings Probs mit Tree!, daher in #navi text-align auf left*/
+		 background: #FFFFFF url(/images/background.jpg) repeat-x;		 
+    }
+	
+		 a:active {text-decoration:none;}
+		 a:visited {text-decoration:none;}
+	     a:hover {text-decoration:none; color: #FF0000; background-color: #FFFFFF}
+		 a:link {text-decoration:none;}
+
+
+#pagebox
+	{	
+		/*width: 1000px;
+		height: 750px;
+		background: #FFFFFF;
+	    */
+		
+		width: 1250px;
+		height: 99%;
+		/**height: 1000px;**/
+		/**background: #FFFFFF;**/
+	}
+	
+#tempheader
+	{
+    	 width: 823px;
+         /**height: 60px;**/
+		 height: 10%;
+         margin: 0 auto;
+		 padding: 0;
+         background: #aaa url(/images/header.jpg) no-repeat center left;
+    }
+
+#header
+	{	 
+	 	 position: absolute;
+    	 width: 1244px;
+         height: 60px;
+		 margin-bottom: 4px;
+         background: #FFFFFF url(/images/header.jpg) no-repeat center left;
+		 border: 1px solid grey;
+    }
+	
+#topmenue
+	{
+    	 width: 330px;
+         height: 30px;
+		 padding-top: 70px;
+		 margin-bottom: 4px;
+		 
+	}
+	
+#topmenue ul
+	{	
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		list-style: none;
+	}
+	
+#topmenue li
+	{
+		display: inline;
+	}
+	
+#topmenue a
+	{
+		width: 82px;
+		display: block;
+		text-align: center;
+		float: left;
+	}
+	
+#suchleiste
+	{
+		width: 888px;
+		height: 30px;
+		padding-top: 70px;
+		margin-bottom: 4px;
+		margin-left: 0;
+		text-align: left;
+	}
+
+#topmenue, #suchleiste
+	{		 
+         display: block;
+         float: left;
+		 overflow: auto;
+		 margin-top: 0px
+         /**margin: 0 0.1em;**/
+	}
+
+#navi, #content
+	{
+		 background: #FFFFFF;
+		 
+         display: block;
+         float: left;
+		 overflow: auto;
+		 margin-top: 0px
+         /**margin: 0 0.1em;**/
+    }
+
+#navi
+	{
+         width: 330px;
+         padding: 1px;
+         float: left;
+		 text-align: left;
+		 margin-right: 2px;
+		 border: 1px solid grey;
+     }
+	 
+#content
+	{
+         width: 888px;
+         margin-left: 0;
+		 padding: 10px;
+		 text-align: left;
+         /**border: 1px dashed silver;**/
+		 border: 1px solid grey;
+    }
+	 
+#ipnet	
+	{
+		 overflow: auto;
+	}
+
+.highlight
+	{
+		font-weight: bolder;
+		color: #FF0000;
+		background-color: #CCCCCC;		
+	}
+	 
+#ipnet ul
+	{
+		list-style: square;
+		list-style-position: outside;
+		margin-left: 0; 
+		padding-left: 1.5em; 	
+	}
+	
+
+#ipnet #highlight a
+	{
+		font-weight: bolder;
+		background-color: #CCCCCC;		
+	}
+	
+#ipnet a:active {text-decoration:none;}
+#ipnet a:visited {text-decoration:none;}
+#ipnet a:hover {text-decoration:none;}
+#ipnet a:link {text-decoration:none;}
+
+
+
+table#tab
+	{
+		border: outset 1pt;
+		border-collapse: separate;
+		border-spacing: 10pt;
+		text-align: left;
+	}
+	
+table#tab td
+	{
+		border: inset 0.5pt;
+	}
+	
+table#tab td.special
+    {
+    	border: inset 0pt;
+    }
+
+
+table#zeile
+    {
+    	border-collapse: separate;
+		border-spacing: 10px 3px;
+		text-align: left;		
+    }
+	
+table#zeile tr
+    {
+     	border: medium solid blue;
+    }
+	
+	
+/***************************
+Menueeintraege sauber darstellen
+****************************/
+ul#ipnetmenue {
+  padding: 1px;
+  margin: 1px;
+  list-style: none;
+  font-size: medium;
+}
+
+ul#ipnetmenue li.active {
+  display: inline;
+}
+
+ul#ipnetmenue li.inactive {
+  display: inline;
+}
+
+#ipnetmenue a:active {text-decoration:none;}
+#ipnetmenue a:visited {text-decoration:none;}
+#ipnetmenue a:hover {text-decoration:none;}
+#ipnetmenue a:link {text-decoration:none;}
+
+p#login {
+  font-size: smaller;
+  text-align: right;
+  padding-right: 1em;
+}
